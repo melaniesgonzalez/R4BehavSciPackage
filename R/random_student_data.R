@@ -12,6 +12,5 @@
 #'   \item{math_motivation}{Degree to which participant felt motivated to learn math at end of two-week period}
 #'   \item{perceived_math_meaning_week1}{Degree to which participant agreed that teacher helped them find a meaningful reason to learn math during week 1}
 #'   \item{perceived_math_meaning_week2}{Degree to which participant agreed that teacher helped them find a meaningful reason to learn math during week 2}
-#'   \item{avg_perceived_math_meaning}{Average degree to which participant agreed that teacher helped them find a meaningful reason to learn math across both weeks}
 #' }
 "random_student_data"
