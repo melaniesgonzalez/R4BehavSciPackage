@@ -5,7 +5,7 @@
 \title{Make a bar plot of responses on Likert scale}
 \usage{
 custbarplot(data = NULL, xvar = NULL, scalepoints = 7,
-  decimals = TRUE, scale = "Agree")
+  decimals = TRUE, scale = "Agree", ...)
 }
 \arguments{
 \item{data}{A dataset (must be in wide format, i.e., one row per participant)}
@@ -17,6 +17,8 @@ custbarplot(data = NULL, xvar = NULL, scalepoints = 7,
 \item{decimals}{Logical value indicating whether or not xvar is on a non-integer scale}
 
 \item{scale}{Character value indicating scale labels (at present, can take on values of "Agree", "Quant", or "True")}
+
+\item{...}{Other arguments to pass on to ggplot}
 }
 \value{
 A barplot showing the counts and percentages of all values of xvar

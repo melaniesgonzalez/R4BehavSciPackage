@@ -5,6 +5,7 @@
 #' @param scalepoints Numeric value indicating number of scalepoints in Likert scale (at present, can take on value of 5 or 7)
 #' @param decimals Logical value indicating whether or not xvar is on a non-integer scale
 #' @param scale Character value indicating scale labels (at present, can take on values of "Agree", "Quant", or "True")
+#' @param ... Other arguments to pass on to ggplot
 #' @return A barplot showing the counts and percentages of all values of xvar
 #' @importFrom lazyeval "lazy"
 #' @importFrom scales "percent"
@@ -23,7 +24,7 @@
 #' custbarplot(data = mtcars, xvar = gear, scalepoints = 5, decimals = FALSE)
 #' @export
 
-custbarplot = function(data = NULL, xvar = NULL, scalepoints = 7, decimals = TRUE, scale = "Agree"){
+custbarplot = function(data = NULL, xvar = NULL, scalepoints = 7, decimals = TRUE, scale = "Agree", ...){
    n <- out5decimalfalse <- NULL
    count_dataset <- data %>%
       dplyr::count(.dots = lazyeval::lazy(xvar)) %>%
@@ -46,7 +47,7 @@ custbarplot = function(data = NULL, xvar = NULL, scalepoints = 7, decimals = TRU
             hjust = .85,
             size = 3,
             position = position_dodge(width = .8)) +
-      scale_y_continuous(limits = c(0, max(dplyr::pull(count_dataset, 2)) + 1), breaks = seq(0, 32.5, by = 5)) +
+      scale_y_continuous(limits = c(0, max(dplyr::pull(count_dataset, 2))*1.1), breaks = seq(0, max(dplyr::pull(count_dataset, 2))*1.1, by = 5)) +
       theme_bw() +
       theme()
 
