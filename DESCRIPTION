@@ -4,8 +4,9 @@ Title: Generate Custom Barplots
 Version: 0.1.0
 Author: c(person("Melanie S.", "Gonzalez", role = c("aut", "cre"), email = "mnetter@utexas.edu"))
 Maintainer: Melanie S. Gonzalez <mnetter@utexas.edu>
-Description: This package contains a function that generates customizable barplots. Specifically, it generates 
-    barplots of variables measured on a Likert scale, and shows both percentages and counts above each bar.
+Description: This package includes a function that generates customizable barplots for variables measured on a Likert scale, 
+    and displays both percentages and counts above each bar. The package also includes a dataset that contains randomly generated
+    data meant to imitate a study of math motivation conducted in a sample of 9th grade students.
 Depends: R (>= 3.4.0)
 License: GPL-3
 Encoding: UTF-8
