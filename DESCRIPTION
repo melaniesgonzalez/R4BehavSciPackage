@@ -16,6 +16,7 @@ Imports:
     ggplot2,
     lazyeval,
     magrittr,
+    rlang,
     scales,
     tidyr
 URL: https://github.com/mnetter589/CustBarPlot
