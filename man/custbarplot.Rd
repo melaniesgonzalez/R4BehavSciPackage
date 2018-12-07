@@ -4,13 +4,15 @@
 \alias{custbarplot}
 \title{Make a bar plot of responses on Likert scale}
 \usage{
-custbarplot(data = NULL, xvar = NULL, scalepoints = 7,
-  decimals = TRUE, scale = "Agree", ...)
+custbarplot(data, xvar, groupvar, scalepoints = 7, decimals = TRUE,
+  scale = "Agree", ...)
 }
 \arguments{
-\item{data}{A dataset (must be in wide format, i.e., one row per participant)}
+\item{data}{Name of dataset (must be in wide format, i.e., one row per participant)}
 
-\item{xvar}{Variable of interest measured on Likert scale}
+\item{xvar}{Name of variable of interest measured on Likert scale}
+
+\item{groupvar}{Name of variable of type factor by which bars should be split}
 
 \item{scalepoints}{Numeric value indicating number of scalepoints in Likert scale (at present, can take on value of 5 or 7)}
 
@@ -27,5 +29,6 @@ A barplot showing the counts and percentages of all values of xvar
 Make a bar plot of responses on Likert scale
 }
 \examples{
-custbarplot(data = mtcars, xvar = gear, scalepoints = 5, decimals = FALSE)
+mtcars$am <- as.factor(mtcars$am)
+custbarplot(data = mtcars, xvar = gear, groupvar = am, scalepoints = 5, decimals = FALSE)
 }

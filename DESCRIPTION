@@ -14,9 +14,9 @@ LazyData: true
 Imports: 
     dplyr,
     ggplot2,
-    magrittr,
-    tidyr,
     lazyeval,
-    scales
+    magrittr,
+    scales,
+    tidyr
 URL: https://github.com/mnetter589/CustBarPlot
 RoxygenNote: 6.1.1
